@@ -451,6 +451,136 @@
       font-size: 0.9rem;
     }
 
+    /* Certifications Section */
+    .certifications-container {
+      margin-top: 2rem;
+    }
+
+    .certifications-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .cert-tab {
+      background: var(--secondary-black);
+      border: 1px solid var(--border-gray);
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      color: var(--text-gray);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .cert-tab:hover {
+      background: var(--accent-gray);
+      color: var(--text-white);
+      border-color: var(--accent-blue);
+    }
+
+    .cert-tab.active {
+      background: var(--accent-blue);
+      color: var(--text-white);
+      border-color: var(--accent-blue);
+    }
+
+    .certifications-content {
+      background: var(--secondary-black);
+      border: 1px solid var(--border-gray);
+      border-radius: 12px;
+      padding: 2rem;
+      min-height: 300px;
+    }
+
+    .certification-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-gray);
+      transition: all 0.3s ease;
+    }
+
+    .certification-item:last-child {
+      border-bottom: none;
+    }
+
+    .certification-item:hover {
+      background: var(--accent-gray);
+      margin: 0 -1rem;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .cert-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .cert-icon {
+      font-size: 2rem;
+      color: var(--accent-blue);
+      width: 40px;
+      text-align: center;
+    }
+
+    .cert-details h3 {
+      color: var(--text-white);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-details p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .cert-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .cert-link {
+      background: var(--accent-blue);
+      color: var(--text-white);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .cert-link:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .cert-status {
+      background: var(--accent-green);
+      color: var(--text-white);
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
     /* Contact Section */
     .contact-grid {
       display: grid;
@@ -795,13 +925,9 @@
               <span class="tech-item">Athena</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn btn-primary">
+              <a href="https://github.com/seanoriasx/AWS-journey" target="_blank"class="btn btn-primary">
                 <i class="fas fa-external-link-alt"></i>
                 View Project
-              </a>
-              <a href="#" class="btn btn-secondary">
-                <i class="fab fa-github"></i>
-                GitHub
               </a>
             </div>
           </div>
@@ -817,13 +943,9 @@
               <span class="tech-item">IT Solutions</span>
             </div>
             <div class="project-links">
-              <a href="#" class="btn btn-primary">
+              <a href="https://github.com/seanoriasx/Disaster-Simulation-Android-Game/blob/main/README.md" target="_blank" class="btn btn-primary">
                 <i class="fas fa-external-link-alt"></i>
                 View Project
-              </a>
-              <a href="#" class="btn btn-secondary">
-                <i class="fab fa-github"></i>
-                GitHub
               </a>
             </div>
           </div>
@@ -853,6 +975,93 @@
             <i class="fas fa-database"></i>
             <h3>Data & Analytics</h3>
             <p>SQL, Data Analysis</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <div class="certifications-container">
+          <div class="certifications-tabs">
+            <button class="cert-tab active" data-tab="current">Current</button>
+            <button class="cert-tab" data-tab="in-progress">In Progress</button>
+            <button class="cert-tab" data-tab="planned">Planned</button>
+          </div>
+          
+          <div class="certifications-content">
+            <!-- Current Certifications -->
+            <div class="tab-content active" id="current">
+              <div class="certification-item">
+                <div class="cert-info">
+                  <i class="fas fa-building cert-icon"></i>
+                  <div class="cert-details">
+                    <h3>SAP Business One</h3>
+                    <p>SAP • 2023</p>
+                  </div>
+                </div>
+                <div class="cert-actions">
+                  <span class="cert-status">Verified</span>
+                  <a href="assets/SAPCertificate.pdf" class="cert-link" target="_blank">View Proof</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- In Progress Certifications -->
+            <div class="tab-content" id="in-progress">
+              <div class="certification-item">
+                <div class="cert-info">
+                  <i class="fab fa-aws cert-icon"></i>
+                  <div class="cert-details">
+                    <h3>AWS Cloud Practitioner Essentials</h3>
+                    <p>Amazon Web Services • Expected 2025</p>
+                  </div>
+                </div>
+                <div class="cert-actions">
+                  <span class="cert-status">In Progress</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Planned Certifications -->
+            <div class="tab-content" id="planned">
+              <div class="certification-item">
+                <div class="cert-info">
+                  <i class="fab fa-aws cert-icon"></i>
+                  <div class="cert-details">
+                    <h3>AWS Certified Cloud Practitioner (Foundational)</h3>
+                    <p>Amazon Web Services • Planned 2027</p>
+                  </div>
+                </div>
+                <div class="cert-actions">
+                  <span class="cert-status">Planned</span>
+                </div>
+              </div>
+              <div class="certification-item">
+                <div class="cert-info">
+                  <i class="fab fa-aws cert-icon"></i>
+                  <div class="cert-details">
+                    <h3>AWS Certified Solutions Architect – Associate</h3>
+                    <p>Amazon Web Services • Planned 2028</p>
+                  </div>
+                </div>
+                <div class="cert-actions">
+                  <span class="cert-status">Planned</span>
+                </div>
+              </div>
+              <div class="certification-item">
+                <div class="cert-info">
+                  <i class="fas fa-shield-alt cert-icon"></i>
+                  <div class="cert-details">
+                    <h3>Certified Cloud Security Professional</h3>
+                    <p>(ISC)² • Planned 2029</p>
+                  </div>
+                </div>
+                <div class="cert-actions">
+                  <span class="cert-status">Planned</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1029,6 +1238,24 @@
     };
     
     setTimeout(typeWriter, 500);
+
+    // Certifications Tab Functionality
+    const certTabs = document.querySelectorAll('.cert-tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    certTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetTab = tab.getAttribute('data-tab');
+        
+        // Remove active class from all tabs and contents
+        certTabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding content
+        tab.classList.add('active');
+        document.getElementById(targetTab).classList.add('active');
+      });
+    });
   </script>
 </body>
 </html>
